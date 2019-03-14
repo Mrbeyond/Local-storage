@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> COUNTER MONITOR WITH LOCAL STORAGE</title>
+</head>
+<body onunload="storecount()" onload="loadcount()">
+	<div id="demo"></div> <br><br>
+	<div id="dem"></div> <br><br>
+	<div id="dm"></div>
+	<button onclick="counter1()">count</button>
+
+	<script type="text/javascript">
+
+		var counte= 0;
+		var dat= new Date();		
+		var n = dat.getMinutes();
+		var addon=n+1;
+
+       	function plus(){
+   		 var dat= new Date();
+		 n = dat.getMinutes();
+		 x = dat.getSeconds();
+				 if(n===addon){
+			 	counte=0;
+			 	addon++; }
+			 	dem.innerHTML="The time is " + n +" : "+x;
+demo.innerHTML= " Count will drop back to 0 when the Minute changes to " +addon ;}
+		
+			
+		function counter1(){			
+			counte++;
+			dm.innerHTML= counte;}
+
+	intval= setInterval(plus, 1000);
+	</script>
+
+	<br><br><br><hr><br><br>
+
+<!-- 	Beginning of everyday's counter
+ --><div id="show3"></div><br><br>
+<div id="show"></div><br>
+<button onclick="counter()">Count</button> <br><br>
+<div id="show2"></div><br>
+<script type="text/javascript">
+	var count2=0;
+	var	counts=0;
+	var m= new Date();		
+	var y = m.getDate();
+	var x = m.getMinutes();
+	var z =m.getSeconds();
+	var addone=y+1;
+	function storecount(){localStorage.setItem("store",  counts );
+						  localStorage.setItem("store2", count2);}
+
+	function loadcount(){counts= localStorage.getItem("store");
+						 count2= localStorage.getItem("store2"); }
+
+	 	function plusplus(){
+   		 var m= new Date();
+		 y = m.getDate();
+		 w = m.getHours();
+		 x = m.getMinutes();
+		 z =m.getSeconds();
+				 if(y===addone){
+			 	count2=0;
+			 	addone++; }
+		show3.innerHTML= "The time is "+ w +" : "+ x +" : " + z + " and today's date is " + y + ". Let's see what will happen tomorrow"}
+		timex=setInterval(plusplus, 1000)
+	function counter(){
+						 counts++;
+						 count2++; 
+						 show.innerHTML= "You've pressed me "+counts+" time(s) in your life time";	
+						 show2.innerHTML= "You've pressed me "+count2+" time(s) today as well but note that I will automatically return to zero(0) tomorrow "+ addone + " and you will have to start all over by pressing me again.  <br> Therefore,HAPPY PRESSING!!!!!!!!!";	}
+
+
+</script>
+
+</body>
+</html>
