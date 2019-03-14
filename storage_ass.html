@@ -46,14 +46,15 @@ demo.innerHTML= " Count will drop back to 0 when the Minute changes to " +addon 
 	var	counts=0;
 	var m= new Date();		
 	var y = m.getDate();
-	var x = m.getMinutes();
+	//var x = m.getMinutes();
+	var f= m.getHours();
 	var z =m.getSeconds();
 	var addone=y+1;
 	function storecount(){localStorage.setItem("store",  counts );
 						  localStorage.setItem("store2", count2);}
 
 	function loadcount(){counts= localStorage.getItem("store");
-						 count2= localStorage.getItem("store2"); }
+						 count2= localStorage.getItem("store2");}
 
 	 	function plusplus(){
    		 var m= new Date();
@@ -64,7 +65,7 @@ demo.innerHTML= " Count will drop back to 0 when the Minute changes to " +addon 
 				 if(y===addone){
 			 	count2=0;
 			 	addone++; }
-		show3.innerHTML= "The time is "+ w +" : "+ x +" : " + z + " and today's date is " + y + ". Let's see what will happen tomorrow"}
+		show3.innerHTML= "The Date is "+y+" and the time is "+f+" : " + x +" : " + z + " and today's date is " + y + ". Let's see what will happen tomorrow"}
 		timex=setInterval(plusplus, 1000)
 	function counter(){
 						 counts++;
