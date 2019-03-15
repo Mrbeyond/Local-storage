@@ -4,10 +4,10 @@
 	<title> COUNTER MONITOR WITH LOCAL STORAGE</title>
 </head>
 <body onunload="storecount()" onload="loadcount()">
+	<div id="dem"></div><br>
+	<div id="dm"></div><br>
+	<button onclick="counter1()">count</button><br><br>
 	<div id="demo"></div> <br><br>
-	<div id="dem"></div> <br><br>
-	<div id="dm"></div>
-	<button onclick="counter1()">count</button>
 
 	<script type="text/javascript">
 
@@ -29,7 +29,7 @@ demo.innerHTML= " Count will drop back to 0 when the Minute changes to " +addon 
 			
 		function counter1(){			
 			counte++;
-			dm.innerHTML= counte;}
+			dm.innerHTML= "You have pressed me "+ counte +" time(s) in the last ONE Minute";}
 
 	intval= setInterval(plus, 1000);
 	</script>
@@ -46,15 +46,17 @@ demo.innerHTML= " Count will drop back to 0 when the Minute changes to " +addon 
 	var	counts=0;
 	var m= new Date();		
 	var y = m.getDate();
-	//var x = m.getMinutes();
+	var x = m.getMinutes();
 	var f= m.getHours();
 	var z =m.getSeconds();
 	var addone=y+1;
 	function storecount(){localStorage.setItem("store",  counts );
-						  localStorage.setItem("store2", count2);}
+						  localStorage.setItem("store2", count2);
+						  localStorage.setItem("storec", counte);}
 
 	function loadcount(){counts= localStorage.getItem("store");
-						 count2= localStorage.getItem("store2");}
+						 count2= localStorage.getItem("store2");
+						 counte= localStorage.getItem("storec");}
 
 	 	function plusplus(){
    		 var m= new Date();
