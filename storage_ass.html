@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,  initial-scale=1">
 	<title> COUNTER MONITOR WITH LOCAL STORAGE</title>
 </head>
-<body onunload="storecount()" onload="loadcount()">
-	<div id="dem"></div><br>
-	<div id="dm"></div><br>
-	<button onclick="counter1()">count</button><br><br>
-	<div id="demo"></div> <br><br>
-
+<body onunload="storecount()" onload="loadcount()" style="background-color: #f0f0f0">
+	<center>
+		<div id="dem"></div><br>
+		<div id="dm"></div><br>
+		<button onclick="counter1()" style="width: 100px">count</button><br><br>
+		<div id="demo"></div> <br>
+	</center>
 	<script type="text/javascript">
-
 		var counte= 0;
 		var dat= new Date();		
 		var n = dat.getMinutes();
@@ -24,8 +26,7 @@
 			 	counte=0;
 			 	addon++; }
 			 	dem.innerHTML="The time is " + n +" : "+x;
-demo.innerHTML= " Count will drop back to 0 when the Minute changes to " +addon ;}
-		
+			demo.innerHTML= " Count will drop back to 0 when the Minute changes to " +addon ;}		
 			
 		function counter1(){			
 			counte++;
@@ -33,14 +34,15 @@ demo.innerHTML= " Count will drop back to 0 when the Minute changes to " +addon 
 
 	intval= setInterval(plus, 1000);
 	</script>
+	<hr> <br>
 
-	<br><br><br><hr><br><br>
-
-<!-- 	Beginning of everyday's counter
- --><div id="show3"></div><br><br>
-<div id="show"></div><br>
-<button onclick="counter()">Count</button> <br><br>
-<div id="show2"></div><br>
+<!-- 	Beginning of everyday's counter-->
+	<center>
+		<div id="show3"></div><br>
+		<div id="show"></div><br>
+		<button onclick="counter()" style="width: 100px">Count</button> <br><br>
+		<div id="show2"></div><br>
+	</center>
 <script type="text/javascript">
 	var count2=0;
 	var	counts=0;
