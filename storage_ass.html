@@ -4,12 +4,29 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,  initial-scale=1">
 	<title> COUNTER MONITOR WITH LOCAL STORAGE</title>
+	<style type="text/css">
+		body{background-color: #f4f9fe;}
+		button{
+				width: 150px;
+				height: 30px;
+				line-height: 30px;
+				border:0;
+				border-radius: 30px;
+				background-color:#0c5eb5;
+				color: white;
+				box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
+				margin-top: 10px;}
+		h3{color: #0c5eb5;}
+
+	</style>
 </head>
-<body onunload="storecount()" onload="loadcount()" style="background-color: #f0f0f0">
+<body onunload="storecount()" onload="loadcount()">
+
 	<center>
+		<h3>COUNT MONITOR WITH LOCAL STORAGE</h3>
 		<div id="dem"></div><br>
 		<div id="dm"></div><br>
-		<button onclick="counter1()" style="width: 100px">count</button><br><br>
+		<button onclick="counter1()" style="width: 100px">COUNT</button><br><br>
 		<div id="demo"></div> <br>
 	</center>
 	<script type="text/javascript">
@@ -40,7 +57,7 @@
 	<center>
 		<div id="show3"></div><br>
 		<div id="show"></div><br>
-		<button onclick="counter()" style="width: 100px">Count</button> <br><br>
+		<button onclick="counter()" style="width: 100px">COUNT</button> <br><br>
 		<div id="show2"></div><br>
 	</center>
 <script type="text/javascript">
